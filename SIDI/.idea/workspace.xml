@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb89074e-746c-4930-b04c-87821f0f6de8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/inventario/inventario.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ingresoAInventarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ingresoAInventarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/ingresoAInventario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/ingresoAInventario.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/inventory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/inventario" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -132,6 +135,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\emmanuel\Documents\laravel_projects\IMSSInformatica\SIDI\resources\views\inventario" />
       <recent name="C:\Users\emmanuel\Documents\laravel_projects\IMSSInformatica\SIDI\resources\views\inventory" />
     </key>
   </component>
@@ -167,7 +171,8 @@
       <workItem from="1577244479880" duration="22000" />
       <workItem from="1577495387731" duration="2857000" />
       <workItem from="1577602968411" duration="5174000" />
-      <workItem from="1577725291731" duration="9207000" />
+      <workItem from="1577725291731" duration="9419000" />
+      <workItem from="1577739765181" duration="2968000" />
     </task>
     <servers />
   </component>
@@ -187,13 +192,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577725981518" />
+    <state x="71" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577742150891">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="71" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1577742150891" />
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1577725309661">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577725309661" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577729565616">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577741937048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1577729565616" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1577741937048" />
   </component>
 </project>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-            <form action="#" enctype="multipart/form-data" method="post" >
+            <form action="/i" enctype="multipart/form-data" method="post" >
 
                 <div class="row">
                     <div class="col-8 offset-2">
