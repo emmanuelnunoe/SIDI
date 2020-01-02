@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Inventario;
 use Illuminate\Http\Request;
 
 class inventarioController extends Controller
@@ -10,5 +11,10 @@ class inventarioController extends Controller
     {
 
      return view('inventario');
+    }
+    public function store(Request $request){
+
+        Inventario::create($request->all());
+
     }
 }
