@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
             <form action="/i" enctype="multipart/form-data" method="post" >
-
+                @csrf
                 <div class="row">
                     <div class="col-8 offset-2">
                         <div class="row">
@@ -14,13 +14,14 @@
 
                             <label for="numeroDeInventario" class="col-md-5 col-form-label ">Numero de Inventario</label>
                             <input id="numeroDeInventario"
+                                   name="numeroDeInventario"
                                    type="text"
                                    class="form-control
                             @error('numeroDeInventario') is-invalid @enderror"
                                    value="{{ old('numeroDeInventario') }}"
                                    required autocomplete="numeroDeInventario" autofocus>
 
-                            <label for="marca" class="col-md-4 col-form-label ">marca</label>
+                          <!--  <label for="marca" class="col-md-4 col-form-label ">marca</label>
                             <input id="marca"
                                    type="text"
                                    class="form-control
@@ -78,7 +79,7 @@
 
                             <label for="contrasena" class="col-md-4 col-form-label ">Contraseña</label>
                             <input id="contrasena"
-                                   type="text"
+                                   type="password"
                                    class="form-control
                             @error('contrasena') is-invalid @enderror"
                                    value="{{ old('contrasena') }}"
@@ -126,7 +127,7 @@
                                    class="form-control
                             @error('imagen') is-invalid @enderror" Model="imagen"
                                    value="{{ old('imagen') }}"
-                                   required autocomplete="imagen" autofocus>
+                                   required autocomplete="imagen" autofocus>-->
                         </div>
                         <div class="row pt-4">
                             <button class="btn btn-primary">Add New Post</button>
