@@ -22,3 +22,4 @@ Route::post('/i', 'inventarioController@store');
 Route::get('/index','inventarioController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('users','UserController');
