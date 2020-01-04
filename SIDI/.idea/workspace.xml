@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb89074e-746c-4930-b04c-87821f0f6de8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/inventarioController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/inventarioController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Inventario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Inventario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inventario/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inventario/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +174,7 @@
       <workItem from="1577602968411" duration="5174000" />
       <workItem from="1577725291731" duration="9419000" />
       <workItem from="1577739765181" duration="2968000" />
-      <workItem from="1577934852019" duration="2087000" />
+      <workItem from="1577934852019" duration="6577000" />
     </task>
     <servers />
   </component>
@@ -189,10 +190,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="422" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1577728310224" />
-    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577725981518">
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577952342670">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577725981518" />
+    <state x="437" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577952342670" />
     <state x="71" y="121" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577742150891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -201,9 +202,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577725309661" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577950410513">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578022850405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1577950410513" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578022850405" />
   </component>
 </project>

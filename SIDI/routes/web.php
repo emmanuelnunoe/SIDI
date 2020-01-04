@@ -17,7 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-Route::get('/ingresoAInventario', 'ingresoAInventarioController@index')->name('ingresoAInventario');
+Route::get('/create', 'inventarioController@create')->name('create');
+Route::post('/i', 'inventarioController@store');
+Route::get('/index','inventarioController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 

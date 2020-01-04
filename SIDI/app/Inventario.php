@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inventario extends Model
 {
- protected $fillable = ['numeroDeinventario'];
+ protected $fillable = ['numeroDeInventario'];
 
 }
