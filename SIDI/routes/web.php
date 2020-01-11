@@ -11,6 +11,7 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,4 +22,5 @@ Route::get('/create', 'inventarioController@create')->name('create');
 Route::post('/i', 'inventarioController@store');
 Route::get('/index','inventarioController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('users', 'UserController');
 
