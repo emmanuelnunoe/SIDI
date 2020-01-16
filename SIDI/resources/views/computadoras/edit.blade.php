@@ -1,0 +1,1 @@
+Sesccion para editar computadoras

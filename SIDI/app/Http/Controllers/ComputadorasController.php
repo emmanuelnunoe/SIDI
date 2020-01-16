@@ -14,7 +14,8 @@ class ComputadorasController extends Controller
      */
     public function index()
     {
-        //
+        return view('computadoras.index');
+
     }
 
     /**
@@ -24,7 +25,7 @@ class ComputadorasController extends Controller
      */
     public function create()
     {
-        //
+        return view('computadoras.create');
     }
 
     /**

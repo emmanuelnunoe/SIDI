@@ -16,7 +16,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
 Auth::routes();
+
+// Metodos de Computadoras
+//Route::get('/computadoras', 'ComputadorasController@index');
+//Route::get('/computadoras/create', 'ComputadorasController@create');
+// Crea todas las rutas del Computadoras
+Route::resource('computadoras', 'ComputadorasController');
 
 Route::get('/create', 'inventarioController@create')->name('create');
 Route::post('/i', 'inventarioController@store');

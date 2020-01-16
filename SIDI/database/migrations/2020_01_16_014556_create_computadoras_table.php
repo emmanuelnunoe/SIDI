@@ -15,6 +15,13 @@ class CreateComputadorasTable extends Migration
     {
         Schema::create('computadoras', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('marca');
+            $table->string('modelo');
+            $table->string('foto');
+            $table->string('NumeroDeInventario');
+            $table->ipAddress('direccionIp');
+            $table->macAddress('macAddress');
+ 
             $table->timestamps();
         });
     }
