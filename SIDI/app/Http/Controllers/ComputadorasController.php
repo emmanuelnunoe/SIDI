@@ -14,7 +14,8 @@ class ComputadorasController extends Controller
      */
     public function index()
     {
-        return view('computadoras.index');
+        $datos['computadoras'] = Computadoras::paginate(5);
+        return view('computadoras.index',$datos);
 
     }
 
@@ -42,7 +43,7 @@ class ComputadorasController extends Controller
        if($request->hasFile('foto')){
            $datosComputadora['foto']=$request->file('foto')->store('uploads','public');
        }
-       
+
        Computadoras::insert($datosComputadora);
 
        return response()->json($datosComputadora);
@@ -88,8 +89,10 @@ class ComputadorasController extends Controller
      * @param  \App\Computadoras  $computadoras
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Computadoras $computadoras)
+    public function destroy($id)
     {
         //
+        Computadoras::destroy($id);
+        return redirect('computadoras');
     }
 }
