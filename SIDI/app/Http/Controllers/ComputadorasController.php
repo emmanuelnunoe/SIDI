@@ -36,7 +36,16 @@ class ComputadorasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       // $datosComputadora =request()->all();
+       $datosComputadora = request()->except('_token') ;
+
+       if($request->hasFile('foto')){
+           $datosComputadora['foto']=$request->file('foto')->store('uploads','public');
+       }
+       
+       Computadoras::insert($datosComputadora);
+
+       return response()->json($datosComputadora);
     }
 
     /**
