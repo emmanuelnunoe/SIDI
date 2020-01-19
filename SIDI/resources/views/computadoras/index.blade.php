@@ -26,7 +26,12 @@ Inicio (Despliegue de datos)
             <td>{{ $computadora->NumeroDeInventario}}</td>
             <td>{{ $computadora->direccionIp }}</td>
             <td>{{ $computadora->macAddress }}</td>
-            <td> Editar | 
+            <td> 
+
+            <a href="{{ url('/computadoras/'.$computadora->id.'/edit') }}">
+                Editar
+            </a>
+            | 
                 
             <form method="post" action="{{  url('/computadoras/'.$computadora->id) }} ">
             {{ @csrf_field() }}

@@ -66,9 +66,10 @@ class ComputadorasController extends Controller
      * @param  \App\Computadoras  $computadoras
      * @return \Illuminate\Http\Response
      */
-    public function edit(Computadoras $computadoras)
+    public function edit($id)
     {
-        //
+        $computadora= Computadoras::findOrFail($id);
+        return view('computadoras.edit',compact('computadora'));
     }
 
     /**
