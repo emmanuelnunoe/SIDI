@@ -8,7 +8,12 @@
     <input type="text" name ="modelo" id="modelo" value="{{ $computadora->modelo}}">
     </br>
 
-    <label for = "foto"> {{ 'foto'}}</label>
+    <label for = "foto"> {{'foto'}}</label>
+    <br/>
+
+    <img src="{{ asset('storage').'/'.$computadora->foto }}" alt="" width="200">
+
+    <br/>
     <input type="file" name ="foto" id="foto" value="{{ $computadora->foto }}">
     </br>
 

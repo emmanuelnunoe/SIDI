@@ -19,10 +19,12 @@ Inicio (Despliegue de datos)
     <tbody>
         @foreach($computadoras as $computadora)
         <tr>
+            <td>
+            <img src="{{ asset('storage').'/'.$computadora->foto }}" alt="" width="200">
+            </td>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $computadora->marca }}</td>
             <td>{{ $computadora->modelo }}</td>
-            <td>{{ $computadora->foto }}</td>
             <td>{{ $computadora->NumeroDeInventario}}</td>
             <td>{{ $computadora->direccionIp }}</td>
             <td>{{ $computadora->macAddress }}</td>
