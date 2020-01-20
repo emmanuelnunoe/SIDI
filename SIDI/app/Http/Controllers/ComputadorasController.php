@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Computadoras;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ComputadorasController extends Controller
 {
@@ -38,7 +39,7 @@ class ComputadorasController extends Controller
     public function store(Request $request)
     {
        // $datosComputadora =request()->all();
-       $datosComputadora = request()->except('_token') ;
+       $datosComputadora = request()->except('_token');
 
        if($request->hasFile('foto')){
            $datosComputadora['foto']=$request->file('foto')->store('uploads','public');
@@ -46,7 +47,8 @@ class ComputadorasController extends Controller
 
        Computadoras::insert($datosComputadora);
 
-       return response()->json($datosComputadora);
+      // return response()->json($datosComputadora);
+      return redirect('computadoras')->with('Mensaje','Computadora agregada con éxito');
     }
 
     /**
@@ -79,9 +81,28 @@ class ComputadorasController extends Controller
      * @param  \App\Computadoras  $computadoras
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Computadoras $computadoras)
+    public function update(Request $request, $id)
     {
-        //
+        $datosComputadora = request()->except(['_token','_method']);
+
+
+       if($request->hasFile('foto')){
+      
+        // Busca la información que coincida con el id 
+        $computadora= Computadoras::findOrFail($id);
+        // Borra la fotografia del id seleccionado
+        Storage::delete('public/'.$computadora->foto);
+
+        $datosComputadora['foto']=$request->file('foto')->store('uploads','public');
+    }
+
+    Computadoras::where('id','=',$id)->update($datosComputadora);
+    
+
+    //$computadora= Computadoras::findOrFail($id);
+    //return view('computadoras.edit',compact('computadora'));
+    return redirect('computadoras')->with('Mensaje','Computadora modificada con éxito');
+
     }
 
     /**
@@ -92,8 +113,15 @@ class ComputadorasController extends Controller
      */
     public function destroy($id)
     {
-        //
-        Computadoras::destroy($id);
-        return redirect('computadoras');
+        // Busca la información que coincida con el id 
+        $computadora= Computadoras::findOrFail($id);
+        // Borra la fotografia del id seleccionado
+       if(Storage::delete('public/'.$computadora->foto)){
+             Computadoras::destroy($id);
+       }
+    
+        //return redirect('computadoras');
+        return redirect('computadoras')->with('Mensaje','Computadora eliminada');
+
     }
 }

@@ -1,12 +1,18 @@
-Inicio (Despliegue de datos)
+@if(Session::has('Mensaje')){{ 
+    Session::get('Mensaje')
+
+}}
+@endif
+<a href="{{ url('computadoras/create')}}">Agregar empleado</a>
+
 <table class="table table-light">
    
 <thead class="thead-light">
         <tr>
             <th>#</th>
+            <th>foto</th>
             <th>marca</th>
             <th>modelo</th>
-            <th>foto</th>
             <th>no. inventario</th>
             <th>ip</th>
             <th>mac</th>
@@ -19,10 +25,10 @@ Inicio (Despliegue de datos)
     <tbody>
         @foreach($computadoras as $computadora)
         <tr>
+            <td>{{ $loop->iteration }}</td>
             <td>
             <img src="{{ asset('storage').'/'.$computadora->foto }}" alt="" width="200">
             </td>
-            <td>{{ $loop->iteration }}</td>
             <td>{{ $computadora->marca }}</td>
             <td>{{ $computadora->modelo }}</td>
             <td>{{ $computadora->NumeroDeInventario}}</td>

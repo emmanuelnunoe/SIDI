@@ -27,8 +27,7 @@ Seccion para crear computadoras
     </br>
 
 
-
-
-
     <input type="submit" value="agregar">
+    <a href="{{ url('computadoras')}}">Regresar</a>
+
 </form>
