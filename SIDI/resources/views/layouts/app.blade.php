@@ -34,6 +34,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('computadoras.index') }}">{{ __('Computadoras') }}</a>
+                    </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

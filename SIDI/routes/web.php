@@ -25,11 +25,11 @@ Auth::routes();
 //Route::get('/computadoras', 'ComputadorasController@index');
 //Route::get('/computadoras/create', 'ComputadorasController@create');
 // Crea todas las rutas del Computadoras
-Route::resource('computadoras', 'ComputadorasController');
+Route::resource('computadoras', 'ComputadorasController')->middleware('auth');
 
 Route::get('/create', 'inventarioController@create')->name('create');
 Route::post('/i', 'inventarioController@store');
 Route::get('/index','inventarioController@index')->name('index');
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ComputadorasController@index')->name('home');
 Route::resource('users', 'UserController');
 

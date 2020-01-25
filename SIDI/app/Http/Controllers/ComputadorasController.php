@@ -38,6 +38,28 @@ class ComputadorasController extends Controller
      */
     public function store(Request $request)
     {
+        /*reglas para validar campos excepto fotografia */
+        $campos=[
+            'marca'=> 'required|string|max:100',
+            'modelo'=>'required|string|max:100',
+            'numeroDeInventario'=>'required|string|max:100',
+            'direccionIp'=> 'required|ip',
+            'macAddress'=>'required|string|max:100',
+        ];
+
+        /* validacion de fotografia  */
+
+        if($request->hasFile('foto')){
+            $campos+=['foto'=>'required|max:10000|mimes:jpeg,png,jpg'];
+
+        }
+        
+        /* validacion de campos si el usuario omite un dato,
+           muestra un mensaje dependiendo del campo que se omite*/
+        $Mensaje=["required"=>'se requiere :attribute '];
+        $this->validate($request,$campos,$Mensaje);
+
+
        // $datosComputadora =request()->all();
        $datosComputadora = request()->except('_token');
 

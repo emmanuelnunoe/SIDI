@@ -1,11 +1,30 @@
-@if(Session::has('Mensaje')){{ 
-    Session::get('Mensaje')
+@extends('layouts.app')
 
-}}
+@section('content')
+
+<div class="container">
+
+<!-- ===========================================================
+        Mensaje de alerta al modificar datos de computadora
+     =========================================================== -->
+@if(Session::has('Mensaje'))
+<div class="alert alert-success" role="alert">
+    {{ Session::get('Mensaje') }}
+    
+</div>
 @endif
-<a href="{{ url('computadoras/create')}}">Agregar empleado</a>
 
-<table class="table table-light">
+<title>Inventario | SIDI</title>
+<a href="{{ url('computadoras/create')}}" class="btn btn-success">Agregar computadora</a>
+</br>
+</br>
+
+
+<!-- ===========================================================
+        Tabla para desplegar el listado de computadoras
+        registradas en el inventario
+     =========================================================== -->
+<table class="table table-light table-hover">
    
 <thead class="thead-light">
         <tr>
@@ -27,7 +46,7 @@
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>
-            <img src="{{ asset('storage').'/'.$computadora->foto }}" alt="" width="200">
+            <img src="{{ asset('storage').'/'.$computadora->foto }}" class="img-thumbnail img-fluid" alt="" width="100">
             </td>
             <td>{{ $computadora->marca }}</td>
             <td>{{ $computadora->modelo }}</td>
@@ -36,15 +55,14 @@
             <td>{{ $computadora->macAddress }}</td>
             <td> 
 
-            <a href="{{ url('/computadoras/'.$computadora->id.'/edit') }}">
+            <a  class="btn btn-warning" href="{{ url('/computadoras/'.$computadora->id.'/edit') }}">
                 Editar
-            </a>
-            | 
+            </a> 
                 
-            <form method="post" action="{{  url('/computadoras/'.$computadora->id) }} ">
+            <form method="post" action="{{  url('/computadoras/'.$computadora->id) }} " style="display:inline">
             {{ @csrf_field() }}
             {{ method_field('DELETE')}}
-            <button type="submit" onclick=" return confirm('¿Borrar?')">Borrar</button>
+            <button class="btn btn-danger" type="submit" onclick=" return confirm('¿Borrar?')">Borrar</button>
                 
             </form>
             </td>
@@ -53,3 +71,6 @@
     </tbody>
 
 </table>
+{{ $computadoras->links()}}
+</div>
+@endsection
