@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.sidebar')
+
+<div class="form-wraper">
 
 <div class="container">
 
@@ -72,5 +75,6 @@
 
 </table>
 {{ $computadoras->links()}}
+</div>
 </div>
 @endsection

@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
-@section('content')
 
+@section('content')
+@include('layouts.sidebar')
+
+<div class="form-wraper">
 <div class="container">
 
 <title>Editar | SIDI</title>
+
 <h1>Editar</h1>
 <form action="{{ url('/computadoras/'.$computadora->id)}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -14,5 +18,6 @@
 
 </form>
 
+</div>
 </div>
 @endsection

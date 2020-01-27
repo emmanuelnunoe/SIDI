@@ -1,5 +1,7 @@
 {{ $Modo== 'crear'? 'Agregar computadora':'Modificar computadora'}}
 
+
+
 <div class="form-group">
     <label for = "marca" class="control-label"> {{ 'Marca'}}</label>
 

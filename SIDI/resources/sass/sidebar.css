@@ -1,0 +1,24 @@
+.sidebar-wraper2{
+    background-color: rgb(236, 236, 236);
+    font-size: 16px;
+    width: 20%;
+    min-height:900px;
+    float:left;
+
+}
+
+
+
+a, li, li:hover{
+    text-decoration: none;
+    display: block;
+ 
+
+}
+
+
+a:hover {
+    text-decoration: none;
+    background-color:#f8fafc;
+   
+}

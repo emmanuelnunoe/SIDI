@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@include('layouts.sidebar')
 
+<div class="form-wraper">
 <div class="container">
 
 <!--
@@ -45,5 +47,6 @@ Inicia Form
 Termina Form
 ===========================================================================
 -->
+</div>
 </div>
 @endsection
