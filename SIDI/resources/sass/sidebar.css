@@ -1,24 +1,41 @@
 .sidebar-wraper2{
     background-color: rgb(236, 236, 236);
-    font-size: 16px;
-    width: 20%;
+    box-shadow: 0px 0px 10px #cacaca;
+    padding-top: 5%;
+    font-size: 17px;
+    width: 18%;
     min-height:900px;
     float:left;
 
 }
 
-
-
-a, li, li:hover{
+.sidebar-item li, .sidebar-item li:hover {
+    color: rgb(36, 36, 36);
     text-decoration: none;
-    display: block;
- 
+    margin-left: 0px;
 
+    
+}
+
+ul, ul:hover{
+    list-style: none;
+    color: rgb(36, 36, 36);
 }
 
 
-a:hover {
-    text-decoration: none;
-    background-color:#f8fafc;
-   
+.sidebar-item li:hover {
+    list-style: none;
+    background-color: white;
+    box-sizing: border-box;
+    color: rgb(36, 36, 36);
+
+    
+}
+
+.profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: bottom;
+    margin: 20px 20px 0px 0px;
 }

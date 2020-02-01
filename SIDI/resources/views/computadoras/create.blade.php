@@ -1,7 +1,6 @@
-@extends('layouts.app')
-
-@section('content')
 @include('layouts.sidebar')
+@extends('layouts.app')
+@section('content')
 
 <div class="form-wraper">
 <div class="container">
