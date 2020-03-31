@@ -31,5 +31,8 @@ Route::get('/create', 'inventarioController@create')->name('create');
 Route::post('/i', 'inventarioController@store');
 Route::get('/index','inventarioController@index')->name('index');
 Route::get('/home', 'ComputadorasController@index')->name('home');
+Route::get('/checklist', 'ChecklistController@index')->name('index');
+Route::get('/subir', 'ImageController@index')->name('index');
+Route::post('/st', 'ImageController@store');
 Route::resource('users', 'UserController');
 

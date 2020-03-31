@@ -1,0 +1,131 @@
+/* ---------- CUSTOM BOOTSTRAP CLASSES -----------*/
+
+
+.card
+{
+    margin:0px;
+}
+
+.custom-btn
+{
+    width: 30%;
+    background: #1e7757;
+    border-color: #1e7757;
+    width: 90%;
+    color: white;
+}
+
+.custom-btn:hover,
+.custom-btn:active,
+.btn-primary:hover,
+.btn-primary:active,
+.btn:active
+{
+    background-color: #228561;
+    border-color: #228561;
+    color: white;
+
+
+}
+
+/* ---------- INPUT TEXT-----------*/
+
+.text-md-right
+{
+    text-align: left!important;
+}
+
+.row
+{
+    margin-left: 0px;
+}
+
+/* ---------- TITULOS -----------*/
+
+
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: bolder;
+    font-size: 30px;
+    background-color: white;
+  }
+  
+  h2 {
+    color: black;
+    font-size: 20PX;
+  }
+  
+  h3 {
+    color: #e6e6e6;
+    background-color: #1a4a38;
+    padding: 10px;
+    box-shadow: 1px 1px 10px #919191;
+    margin-bottom: 30px;
+  }
+  
+  h4 {
+    margin-top: 50px;
+    font-size: medium;
+  }
+  
+  /* ---------- NAVBAR -----------*/
+  
+  nav {
+    background-color: 0;
+  }
+  
+  /* ---------- FONDO -----------*/
+  
+  .green-background-imss {
+    background: white;
+    margin-bottom: 10px;
+    height: 480px;
+  }
+  
+  /* ---------- LOGO IMSS -----------*/
+  
+  img {
+    width: 90px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    padding-left: 40%;
+    padding-top: 0px;
+  }
+
+  .logo-custom 
+  {
+    background-color: #ffffff;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 20%;
+  }
+  
+  /* ---------- TITULO FORM -----------*/
+  
+  .titulo-form {
+    /*Color verde claro imss*/
+    background-color: #1E7757;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    border: none;
+  }
+  
+
+  .py-4 { background-color: white; }
+
+
+  .app-name, .app-name:hover {background-color:transparent;}
+
+
