@@ -127,5 +127,5 @@
 
 
   .app-name, .app-name:hover {background-color:transparent;}
-
+  a, a:hover{ text-decoration: none;}
 

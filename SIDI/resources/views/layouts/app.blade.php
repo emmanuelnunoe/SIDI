@@ -24,6 +24,8 @@
          <!--TODO : CARGAR FORM.CSS y otros archivos.css -->
   <!-- Styles -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <!-- Sidebar -->
+    <link href="{{ asset('css/sidebar.css') }}" rel="stylesheet">
 
 </head>
 <body>
