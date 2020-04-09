@@ -13,9 +13,11 @@ class InformacionDeDominio extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('informacion_de_dominio');
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
-            $table->foreignId('computadoras');
+            $table->unsignedBigInteger('computadora_id');
+            $table->foreign('computadora_id')->references('id')->on('computadoras');
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
             $table->string('cuenta_dominio');
             $table->macAddress('mac_address');

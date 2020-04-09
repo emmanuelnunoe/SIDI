@@ -15,9 +15,9 @@ class SistemaOperativo extends Migration
     {
         //
         Schema::create('sistemas_operativos', function(Blueprint $table) {
-        $table->id();
-        $table->integer('sitema_operativo');        //  catalogo de sistemas operativos
-        $table->integer('edicion');                 //  catalogo de edicion
+        $table->bigIncrements('id');
+        $table->integer('sitema_operativo');        //  descripcion
+        $table->integer('edicion');                 //  tipo edicion
         $table->boolean('tipo_sistema');            //  0:32bit, 1:64bits
         $table->integer('servicepack');
         $table->boolean('licencia_activa');       //  0:si, 1:no

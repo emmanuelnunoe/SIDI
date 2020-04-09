@@ -13,6 +13,7 @@ class CreateComputadorasTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('computadoras', function (Blueprint $table) {
             /*--------- DATOS DEL EQUIPO ------------- */
             $table->bigIncrements('id');
@@ -24,14 +25,14 @@ class CreateComputadorasTable extends Migration
             $table->string('procesadores');
             $table->string('velocidad');
             $table->integer('disco_duro');              //  capacidad en GB
-            $table->integer('ram');                     //  capacidad en GB
-            $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
-            $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
+            $table->integer('ram');                    //  capacidad en GB
+           // $table->foreignId('sistema_operativo')->references('id')->on('sistemas_operativo');
             $table->timestamps();
 
 
             
         });
+       
     }
 
     /**
