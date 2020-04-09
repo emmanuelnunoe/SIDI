@@ -13,11 +13,12 @@ class InformacionDeDominio extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('informacion_de_dominio');
+
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
-            $table->unsignedBigInteger('computadora_id');
-            $table->foreign('computadora_id')->references('id')->on('computadoras');
+            $table->unsignedInteger('id');
+            $table->unsignedInteger('computadora_id');
+            $table->foreign('computadora_id')->references('id')->on('computadoras')->onDelete('cascade');
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
             $table->string('cuenta_dominio');
             $table->macAddress('mac_address');
@@ -37,6 +38,13 @@ class InformacionDeDominio extends Migration
      */
     public function down()
     {
-        //
+      
+        Schema::table('informacion_de_dominio', function (Blueprint $table) {
+                $table->dropForeign(['computadora_id']); // drop the foreign key.
+                $table->dropColumn('computadora_id'); // drop the column
+          });
+          Schema::dropIfExists('informacion_de_dominio');
+       
+         
     }
 }

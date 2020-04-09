@@ -13,10 +13,10 @@ class SistemaOperativo extends Migration
      */
     public function up()
     {
-        //
+
         Schema::create('sistemas_operativos', function(Blueprint $table) {
-        $table->bigIncrements('id');
-        $table->integer('sitema_operativo');        //  descripcion
+        $table->unsignedBigInteger('id');
+        $table->string('sitema_operativo');        //  descripcion
         $table->integer('edicion');                 //  tipo edicion
         $table->boolean('tipo_sistema');            //  0:32bit, 1:64bits
         $table->integer('servicepack');
@@ -31,6 +31,6 @@ class SistemaOperativo extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('sistemas_operativos');
     }
 }
