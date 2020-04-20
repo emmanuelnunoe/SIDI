@@ -27,6 +27,13 @@ class CreateComputadorasTable extends Migration
             $table->integer('disco_duro');              //  capacidad en GB
             $table->integer('ram');                    //  capacidad en GB
             $table->timestamps();
+            $table->macAddress('mac_address');
+            $table->ipAddress('direccion_ip');
+            $table->boolean('tipo_ip');                 //   1: estatica, 0:dinamico 
+            $table->string('host'); // pendiente de revisar
+            $table->boolean('internet');                //   1:normal, 0:extendido
+            
+
 
            
 
