@@ -13,8 +13,6 @@ class CreateChecklistsTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('checklists');
-
         Schema::create('checklists', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();

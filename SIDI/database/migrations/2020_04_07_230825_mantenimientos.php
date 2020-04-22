@@ -16,17 +16,18 @@ class Mantenimientos extends Migration
 
         // revisar
         Schema::create('mantenimientos', function(Blueprint $table) {
-            $table->unsignedInteger('id');
-            $table->date('ultimo_servicio');
-            $table->boolean('tipo_servicio');
-            $table->date('prox_servicio');
-            $table->boolean('envio_subdelegacion');  // 1=se esta reparando en subdelegacion, 0:el equipo esta activo en la unidad
-            $table->date('fecha_de_envio_subdelegacione');
-            $table->date('entrega_subdelegacion');
-            $table->boolean('activo');
-            $table->string('version_de_imagen');
-            $table->string('foto');    
-            $table->timestamps();
+        $table->bigIncrements('id');
+        $table->date('ultimo_servicio');
+        $table->boolean('tipo_servicio');
+        //$table->date('prox_servicio');
+        //$table->boolean('envio_subdelegacion');  // 1=se esta reparando en subdelegacion, 0:el equipo esta activo en la unidad
+        //$table->date('fecha_de_envio_subdelegacione');
+        //$table->table('entrega_subdelegacion');
+        //$table->boolean('activo');
+        //$table->string('version_de_imagen');
+        //$table->string('foto');    
+        
+        $table->timestamps();
 
         }); 
     
@@ -40,6 +41,6 @@ class Mantenimientos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mantenimientos');
+        //
     }
 }

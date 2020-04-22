@@ -13,13 +13,18 @@ class SistemaOperativo extends Migration
      */
     public function up()
     {
-
+        //
         Schema::create('sistemas_operativos', function(Blueprint $table) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         $table->unsignedBigInteger('id');
         $table->string('sitema_operativo');        //  descripcion
+=======
+        $table->bigIncrements('id');
+        $table->integer('sitema_operativo');        //  descripcion
+>>>>>>> parent of 016532b... actualizacion migrations: foreign keys
         $table->integer('edicion');                 //  tipo edicion
 =======
         $table->id();
@@ -49,6 +54,6 @@ class SistemaOperativo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sistemas_operativos');
+        //
     }
 }

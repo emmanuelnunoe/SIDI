@@ -16,6 +16,7 @@ class CreateComputadorasTable extends Migration
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
@@ -23,9 +24,12 @@ class CreateComputadorasTable extends Migration
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
+=======
+        Schema::enableForeignKeyConstraints();
+>>>>>>> parent of 016532b... actualizacion migrations: foreign keys
         Schema::create('computadoras', function (Blueprint $table) {
             /*--------- DATOS DEL EQUIPO ------------- */
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('numero_de_inventario');
             $table->integer('tipo');                    // 1= pc 0=laptop
             $table->string('marca');
@@ -38,6 +42,7 @@ class CreateComputadorasTable extends Migration
 <<<<<<< HEAD
 <<<<<<< HEAD
             $table->integer('ram');                    //  capacidad en GB
+<<<<<<< HEAD
 =======
             $table->integer('ram');                     //  capacidad en GB
             $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
@@ -53,9 +58,10 @@ class CreateComputadorasTable extends Migration
             $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
             $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
+=======
+           // $table->foreignId('sistema_operativo')->references('id')->on('sistemas_operativo');
+>>>>>>> parent of 016532b... actualizacion migrations: foreign keys
             $table->timestamps();
-
-           
 
 
             

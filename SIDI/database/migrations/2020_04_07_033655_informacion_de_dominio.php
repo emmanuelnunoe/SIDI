@@ -14,6 +14,7 @@ class InformacionDeDominio extends Migration
     public function up()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
@@ -26,6 +27,13 @@ class InformacionDeDominio extends Migration
             /*--------- INFORMACION DE DOMINIO------------- */
             $table->foreignId('computadoras');
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
+=======
+        Schema::dropIfExists('informacion_de_dominio');
+        Schema::create('informacion_de_dominio', function(Blueprint $table) {
+            /*--------- INFORMACION DE DOMINIO------------- */
+            $table->unsignedBigInteger('computadora_id');
+            $table->foreign('computadora_id')->references('id')->on('computadoras');
+>>>>>>> parent of 016532b... actualizacion migrations: foreign keys
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
             $table->string('cuenta_dominio');
             $table->macAddress('mac_address');
@@ -44,13 +52,6 @@ class InformacionDeDominio extends Migration
      */
     public function down()
     {
-      
-        Schema::table('informacion_de_dominio', function (Blueprint $table) {
-                $table->dropForeign(['computadora_id']); // drop the foreign key.
-                $table->dropColumn('computadora_id'); // drop the column
-          });
-          Schema::dropIfExists('informacion_de_dominio');
-       
-         
+        //
     }
 }

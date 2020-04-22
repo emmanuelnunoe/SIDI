@@ -13,11 +13,11 @@ class CuentasDeUsuario extends Migration
      */
     public function up()
     {
-    
-
-         Schema::create('cuentas_de_usuario', function(Blueprint $table) {
+        
+            Schema::create('cuentas_de_usuario', function(Blueprint $table) {
                 /*--------- CUENTAS DE USUARIO------------- */
                 $table->string('contraseña');
+                $table->string('contraseña_anterior');
                 $table->integer('nombre_de_dominio');       //  catalogo de dominos html
             
     
@@ -31,7 +31,6 @@ class CuentasDeUsuario extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cuentas_de_usuario');
-        
+        //
     }
 }

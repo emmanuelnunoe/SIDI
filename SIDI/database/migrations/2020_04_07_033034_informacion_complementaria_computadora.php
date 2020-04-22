@@ -35,7 +35,6 @@ class InformacionComplementariaComputadora extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('computadoras');  
-        
+        //
     }
 }
