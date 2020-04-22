@@ -13,18 +13,16 @@ class InformacionComplementariaComputadora extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('informacion_complementaria_computadoras');
-        Schema::create('informacion_complementaria_computadoras', function (Blueprint $table) {
+        Schema::create('informacion_complementaria_computadora', function (Blueprint $table) {
         
             /* tabla complemento_informacion_computadora */
-        
-            $table->bigIncrements('id');
+            $table->foreign('id')->references('id')->on('computadoras');
             $table->integer('garantia');                //  0:si, 1:no, otro: cantidad en meses
             $table->string('centro_de_costos');
             $table->date('anio_de_adquisicion');
             $table->integer('procedencia');             // (1=compra, 2=donacion/siniestro, 3 PNAEC)
             $table->boolean('equipo_suceptible');       //  1=Reasignacion  0=baja    
-            $table->string('zona_horaria'); 
+            $table->varchar('zona_horaria'); 
              
         });
 

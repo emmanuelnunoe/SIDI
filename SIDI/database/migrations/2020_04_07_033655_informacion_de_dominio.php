@@ -13,6 +13,7 @@ class InformacionDeDominio extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD
 
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
@@ -20,6 +21,12 @@ class InformacionDeDominio extends Migration
             $table->unsignedInteger('computadora_id');
             $table->foreign('computadora_id')->references('id')->on('computadoras')->onDelete('cascade');
             $table->boolean('unido_a_dominio');          // 1:=i, 0=no
+=======
+        Schema::create('informacion_de_dominio', function(Blueprint $table) {
+            /*--------- INFORMACION DE DOMINIO------------- */
+            $table->foreignId('computadoras');
+            $table->boolean('unido_a_dominio');          // 0:si, 1:no
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
             $table->string('cuenta_dominio');
             $table->password_hash('contrasena');
             $table->string('zona_horaria');

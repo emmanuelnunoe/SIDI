@@ -12,8 +12,12 @@ class Ubicacion extends Migration
      * @return void
      */
     public function up()
+<<<<<<< HEAD
     {   
         Schema::dropIfExists('ubicacion');
+=======
+    {
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
         Schema::create('ubicacion', function(Blueprint $table) {
                       /*--------- UBICACION FISICA------------- */
                       $table->string('piso');
