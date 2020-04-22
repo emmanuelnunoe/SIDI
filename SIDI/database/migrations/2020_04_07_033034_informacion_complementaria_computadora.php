@@ -22,7 +22,7 @@ class InformacionComplementariaComputadora extends Migration
             $table->date('anio_de_adquisicion');
             $table->integer('procedencia');             // (1=compra, 2=donacion/siniestro, 3 PNAEC)
             $table->boolean('equipo_suceptible');       //  1=Reasignacion  0=baja    
-            $table->varchar('zona_horaria'); 
+            $table->string('zona_horaria'); 
              
         });
 
