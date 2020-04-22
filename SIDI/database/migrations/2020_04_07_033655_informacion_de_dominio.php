@@ -13,32 +13,21 @@ class InformacionDeDominio extends Migration
      */
     public function up()
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
             $table->unsignedInteger('id');
             $table->unsignedInteger('computadora_id');
             $table->foreign('computadora_id')->references('id')->on('computadoras')->onDelete('cascade');
-            $table->boolean('unido_a_dominio');          // 1:=i, 0=no
-=======
-=======
->>>>>>> parent of 15c96e0... Migrations estan funcionando
-        Schema::create('informacion_de_dominio', function(Blueprint $table) {
-            /*--------- INFORMACION DE DOMINIO------------- */
-            $table->foreignId('computadoras');
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
->>>>>>> parent of 15c96e0... Migrations estan funcionando
             $table->string('cuenta_dominio');
-            $table->password_hash('contrasena');
-            $table->string('zona_horaria');
-            $table->integer('nombre_de_dominio');
-            $table->string('email');
-            $table->boolean('lynk');
-            $table->int('permisos_de_usuario');
-            $table->longText('motivo_si_es_administrador');
-           
+            $table->macAddress('mac_address');
+            $table->ipAddress('direccion_ip');
+            $table->boolean('tipo_ip');                 //   0: estatica, 1:dinamico 
+            $table->string('host'); // pendiente de revisar
+            $table->boolean('internet');                //   0:normal, 1:extendido
+   
         });
     }
 

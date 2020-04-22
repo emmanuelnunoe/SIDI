@@ -45,13 +45,6 @@ class CreateComputadorasTable extends Migration
             $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
             $table->timestamps();
-            $table->macAddress('mac_address');
-            $table->ipAddress('direccion_ip');
-            $table->boolean('tipo_ip');                 //   1: estatica, 0:dinamico 
-            $table->string('host'); // pendiente de revisar
-            $table->boolean('internet');                //   1:normal, 0:extendido
-            
-
 
            
 
