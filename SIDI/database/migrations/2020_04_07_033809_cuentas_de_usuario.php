@@ -32,5 +32,8 @@ class CuentasDeUsuario extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('cuentas_de_usuario');
+
+        
     }
 }

@@ -29,5 +29,7 @@ class SistemaOperativo extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('sistemas_operativos');
+
     }
 }

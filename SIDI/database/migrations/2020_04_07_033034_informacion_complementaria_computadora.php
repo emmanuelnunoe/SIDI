@@ -16,7 +16,7 @@ class InformacionComplementariaComputadora extends Migration
         Schema::create('informacion_complementaria_computadora', function (Blueprint $table) {
         
             /* tabla complemento_informacion_computadora */
-            $table->foreign('id')->references('id')->on('computadoras');
+            $table->increments('id');
             $table->integer('garantia');                //  0:si, 1:no, otro: cantidad en meses
             $table->string('centro_de_costos');
             $table->date('anio_de_adquisicion');
@@ -35,6 +35,7 @@ class InformacionComplementariaComputadora extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('informacion_complementaria_computadora');
+
     }
 }

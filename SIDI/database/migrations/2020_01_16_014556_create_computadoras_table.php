@@ -25,8 +25,6 @@ class CreateComputadorasTable extends Migration
             $table->string('velocidad');
             $table->integer('disco_duro');              //  capacidad en GB
             $table->integer('ram');                     //  capacidad en GB
-            $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
-            $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
             $table->timestamps();
 
 
