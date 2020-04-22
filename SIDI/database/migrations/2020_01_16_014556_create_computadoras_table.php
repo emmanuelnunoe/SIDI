@@ -13,8 +13,6 @@ class CreateComputadorasTable extends Migration
      */
     public function up()
     {
-
-
         Schema::create('computadoras', function (Blueprint $table) {
             /*--------- DATOS DEL EQUIPO ------------- */
             $table->bigIncrements('id');
