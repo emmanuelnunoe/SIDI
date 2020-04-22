@@ -16,9 +16,15 @@ class SistemaOperativo extends Migration
 
         Schema::create('sistemas_operativos', function(Blueprint $table) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $table->unsignedBigInteger('id');
         $table->string('sitema_operativo');        //  descripcion
         $table->integer('edicion');                 //  tipo edicion
+=======
+        $table->id();
+        $table->integer('sitema_operativo');        //  catalogo de sistemas operativos
+        $table->integer('edicion');                 //  catalogo de edicion
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
         $table->id();
         $table->integer('sitema_operativo');        //  catalogo de sistemas operativos

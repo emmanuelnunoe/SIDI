@@ -13,8 +13,12 @@ class Ubicacion extends Migration
      */
     public function up()
 <<<<<<< HEAD
+<<<<<<< HEAD
     {   
         Schema::dropIfExists('ubicacion');
+=======
+    {
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
     {
 >>>>>>> parent of 15c96e0... Migrations estan funcionando

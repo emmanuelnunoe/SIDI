@@ -14,7 +14,10 @@ class CreateComputadorasTable extends Migration
     public function up()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
    
+=======
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
         Schema::create('computadoras', function (Blueprint $table) {
@@ -29,7 +32,13 @@ class CreateComputadorasTable extends Migration
             $table->string('velocidad');
             $table->integer('disco_duro');              //  capacidad en GB
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->integer('ram');                    //  capacidad en GB
+=======
+            $table->integer('ram');                     //  capacidad en GB
+            $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
+            $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
             $table->integer('ram');                     //  capacidad en GB
             $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');

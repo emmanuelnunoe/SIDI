@@ -14,6 +14,7 @@ class InformacionDeDominio extends Migration
     public function up()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
@@ -22,6 +23,8 @@ class InformacionDeDominio extends Migration
             $table->foreign('computadora_id')->references('id')->on('computadoras')->onDelete('cascade');
             $table->boolean('unido_a_dominio');          // 1:=i, 0=no
 =======
+=======
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
             $table->foreignId('computadoras');
