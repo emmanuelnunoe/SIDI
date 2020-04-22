@@ -15,7 +15,10 @@ class CreateComputadorasTable extends Migration
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
    
+=======
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
 >>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
@@ -33,7 +36,13 @@ class CreateComputadorasTable extends Migration
             $table->integer('disco_duro');              //  capacidad en GB
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->integer('ram');                    //  capacidad en GB
+=======
+            $table->integer('ram');                     //  capacidad en GB
+            $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
+            $table->foreign('info_complementaria')->references('id')->on('informacion_complementaria_computadora');
+>>>>>>> parent of 15c96e0... Migrations estan funcionando
 =======
             $table->integer('ram');                     //  capacidad en GB
             $table->foreign('sistema_operativo')->references('id')->on('sistemas_operativos');
