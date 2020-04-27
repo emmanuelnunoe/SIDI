@@ -17,14 +17,14 @@ class InformacionDeDominio extends Migration
      
         Schema::create('informacion_de_dominio', function(Blueprint $table) {
             /*--------- INFORMACION DE DOMINIO------------- */
-            $table->increments('computadora_id');
+            $table->increments('id');
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
             $table->string('cuenta_dominio');
-            $table->macAddress('mac_address');
-            $table->ipAddress('direccion_ip');
-            $table->boolean('tipo_ip');                 //   0: estatica, 1:dinamico 
-            $table->string('host'); // pendiente de revisar
-            $table->boolean('internet');                //   0:normal, 1:extendido
+            $table->hash('contrasena');
+            $table->string('correo_electronico');
+            $table->boolean('lynk');
+            $table->integer('permisos_de_usuario');
+            $table->longText('motivo_si_es_administrador');
    
         });
     }

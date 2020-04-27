@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Ubicacion extends Migration
+class Software extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,13 @@ class Ubicacion extends Migration
      * @return void
      */
     public function up()
-
-    {    
-
-        Schema::create('ubicacion', function(Blueprint $table) {
-                      /*--------- UBICACION FISICA------------- */
-                      $table->string('piso');
-                      $table->string('Area');
-
+    {
+        Schema::create('software', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->string('software');
+            $table->longText('comentarios');
         });
-  
     }
 
     /**
@@ -31,7 +28,6 @@ class Ubicacion extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('ubicacion');
+        Schema::dropIfExists('software');
     }
 }

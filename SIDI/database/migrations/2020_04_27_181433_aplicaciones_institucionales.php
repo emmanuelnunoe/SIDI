@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class SistemaOperativo extends Migration
+class AplicacionesInstitucionales extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class SistemaOperativo extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('sistemas_operativos', function(Blueprint $table) {
-
-        $table->increments('id');
-
+        Schema::create('aplicaciones_institucionales', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->timestamps();
+            $table->strign('aplicacion');
+            
         });
     }
 
@@ -28,8 +28,6 @@ class SistemaOperativo extends Migration
      */
     public function down()
     {
-        //
-        Schema::dropIfExists('sistemas_operativos');
-
+        Schema::dropIfExists('aplicaciones_institucionales');
     }
 }

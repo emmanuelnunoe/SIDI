@@ -16,7 +16,6 @@ class CreateComputadorasTable extends Migration
         Schema::create('computadoras', function (Blueprint $table) {
             /*--------- DATOS DEL EQUIPO ------------- */
             $table->bigIncrements('id');
-            $table->string('numero_de_inventario');
             $table->integer('tipo');                    // 1= pc 0=laptop
             $table->string('marca');
             $table->string('modelo');
