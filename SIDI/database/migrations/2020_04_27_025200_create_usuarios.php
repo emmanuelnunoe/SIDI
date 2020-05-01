@@ -25,6 +25,7 @@ class CreateUsuarios extends Migration
             $table->string('clave_adscripcion');
             $table->enum('contratacion',['08','base','estatuto','nomina_ordinaria','nomina_mando']);
             $table->boolean('activo');
+            
         });
     }
 

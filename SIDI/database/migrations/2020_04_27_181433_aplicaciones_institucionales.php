@@ -16,7 +16,7 @@ class AplicacionesInstitucionales extends Migration
         Schema::create('aplicaciones_institucionales', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->strign('aplicacion');
+            $table->string('aplicacion');
             
         });
     }

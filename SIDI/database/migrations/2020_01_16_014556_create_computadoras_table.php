@@ -34,13 +34,14 @@ class CreateComputadorasTable extends Migration
             $table->integer('ram');                     //  capacidad en GB
             $table->integer('sistema_operativo');
             $table->enum('edicion',['enterprise','profesional']);
-            $table->boolean('tipo_sistema ');           // 1=32bits, 0=64bits
+            $table->boolean('tipo_sistema');           // 1=32bits, 0=64bits
             $table->integer('service_pack');
             $table->boolean('licencia_activa');           //  1=si, 0=no marca_monitor
             $table->string('marca_monitor');
             $table->string('modelo_monitor');
             $table->string('serie_monitor');
             $table->timestamps();
+            $table->bigInteger('usuarios_id')->refernces('id')->on('usuarios')->onDelete('cascade');
 
 
             

@@ -20,7 +20,7 @@ class InformacionDeDominio extends Migration
             $table->increments('id');
             $table->boolean('unido_a_dominio');          // 0:si, 1:no
             $table->string('cuenta_dominio');
-            $table->hash('contrasena');
+            $table->string('contrasena');
             $table->string('correo_electronico');
             $table->boolean('lynk');
             $table->integer('permisos_de_usuario');
