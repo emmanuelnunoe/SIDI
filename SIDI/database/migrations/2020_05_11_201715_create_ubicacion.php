@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Hospital extends Migration
+class CreateUbicacion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Hospital extends Migration
      */
     public function up()
     {
-        Schema::create('hospital', function (Blueprint $table) {
+        Schema::create('ubicacion', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('nombre');
@@ -32,8 +32,6 @@ class Hospital extends Migration
             $table->integer('coordinacion_o_unidad');
             $table->integer('division_area_o_especialidad');
             $table->integer('departamento_o_servicio');
-
-
         });
     }
 
@@ -44,6 +42,8 @@ class Hospital extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hospital');
+        Schema::dropIfExists('ubicacion');
     }
 }
+
+
