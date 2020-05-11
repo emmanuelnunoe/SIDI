@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ControlCambiosComputadoras extends Migration
+class ControlCambiosPc extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class ControlCambiosComputadoras extends Migration
      */
     public function up()
     {
-        Schema::create('control_cambios_computadoras', function (Blueprint $table) {
+        Schema::create('control_cambios_pc', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->timestamps();
@@ -21,9 +21,12 @@ class ControlCambiosComputadoras extends Migration
             $table->string('motivo');
             $table->string('usuario');
             $table->string('cambios');
-            $table->bigInteger('computadoras_id');
-            $table->foreign('computadoras_id')->refernces('id')->on('computadoras')->onDelete('cascade');
+            $table->bigInteger('computadora_id');
+
+
+          
         });
+
     }
 
     /**
@@ -33,11 +36,7 @@ class ControlCambiosComputadoras extends Migration
      */
     public function down()
     {
-        Schema::table('control_cambios_computadoras',function(Blueprint $table) {
-            $table->dropForeign('control_cambios_computadoras_computadoras_id_foreign');
-        });
-        Schema::dropIfExists('control_cambios_computadoras');
-        
 
+        Schema::dropIfExists('control_cambios_pc');
     }
 }

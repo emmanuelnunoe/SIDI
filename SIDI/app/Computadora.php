@@ -16,7 +16,7 @@ class Computadoras extends Model
     }
         // relacion inversa 1:N con usuarios que utilizan esta computadora
     public function usuarios() {
-        return $this->belongsTo('App\Usuario');
+        return $this->belongsTo('App/Usuario');
     }
 
 
