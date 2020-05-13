@@ -40,11 +40,31 @@ class ComputadorasController extends Controller
     {
         /*reglas para validar campos excepto fotografia */
         $campos=[
-            'marca'=> 'required|string|max:100',
+            'tipo'=> 'boolean',
+            'marca'=>'required|string|max:100',
             'modelo'=>'required|string|max:100',
-            'numeroDeInventario'=>'required|string|max:100',
-            'direccionIp'=> 'required|ip',
-            'macAddress'=>'required|string|max:100',
+            'numero_de_serie'=>'required|string|max:100',
+            'centro_de_costos'=>'required|string|max:100',
+            'año_adquisicion'=>'required|integer',
+            'procedentcia'=>'required|enum',
+            'host'=>'required|string|max:100',
+            'direccion_mac'=>'required|macAddress|max:100',
+            'direccion_ip'=>'required|ipAddress|max:100',
+            'tipo_ip'=>'required|boolean',
+            'internet'=>'required|boolean',
+            'procesador'=>'required|string|max:100',
+            'velocidad'=>'required|integer',
+            'disco_duro'=>'required|integer',
+            'ram'=>'required|integer',
+            'sistema_operativo'=>'required|string|max:100',
+            'edicion'=>'required|enum',
+            'tipo_sistema'=>'required|boolean',
+            'service_pack '=>'required|integer|max:100',
+            'licencia_activa'=>'required|boolean',
+            'marca_monito'=>'required|string|max:100',
+            'modelo_monitor'=>'required|string|max:100',
+            'serie_monitor'=>'required|string|max:100',
+
         ];
 
         /* validacion de fotografia  */
