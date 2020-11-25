@@ -1,0 +1,18 @@
+.sidebar-web {
+    width: 25%;
+}
+
+.btn-sidebar-web {
+    border-radius: 0px;
+    border: 0px;
+    background-color: aqua;
+}
+
+.btn {
+    background-color: aqua;
+    color: aqua;
+}
+
+.btn-primary {
+    background-color: brown;
+}

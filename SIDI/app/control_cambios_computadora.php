@@ -12,4 +12,15 @@ class control_cambios_computadora extends Model
     {
         return $this->belongsTo('App\Computadora');
     }
+
+    
+
+    public function cambiarUbicacion( $id, $ubicacionActual, $nuevaUbicacion){
+
+        $model = new App\Computadora();
+        $computadora =  $model->hydrate
+        DB:select(
+
+        )
+    }
 }

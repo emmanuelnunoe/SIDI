@@ -1,0 +1,13 @@
+use sidi;
+DROP TABLE IF EXISTS `checklist`;
+DROP TABLE IF EXISTS `computadoras`;
+DROP TABLE IF EXISTS `control_cambios_pc`;
+DROP TABLE IF EXISTS `failed_jobs`;
+DROP TABLE IF EXISTS `informacion_de_dominio`;
+DROP TABLE IF EXISTS `mantenimientos`;
+DROP TABLE IF EXISTS `migrations`;
+DROP TABLE IF EXISTS `pasword_resets`;
+DROP TABLE IF EXISTS `programas`;
+DROP TABLE IF EXISTS `puestos`;
+DROP TABLE IF EXISTS `users`;
+DROP TABLE IF EXISTS `usuarios`;

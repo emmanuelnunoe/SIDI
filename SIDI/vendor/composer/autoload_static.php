@@ -427,7 +427,6 @@ class ComposerStaticInit160642073b267b76aa7f828e82139588
     );
 
     public static $classMap = array (
-        'App\\Computadoras' => __DIR__ . '/../..' . '/app/Computadora.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -494,6 +493,7 @@ class ComposerStaticInit160642073b267b76aa7f828e82139588
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/DayOfMonthField.php',
@@ -3464,7 +3464,6 @@ class ComposerStaticInit160642073b267b76aa7f828e82139588
         'Psr\\Log\\LoggerInterface' => __DIR__ . '/..' . '/psr/log/Psr/Log/LoggerInterface.php',
         'Psr\\Log\\LoggerTrait' => __DIR__ . '/..' . '/psr/log/Psr/Log/LoggerTrait.php',
         'Psr\\Log\\NullLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/NullLogger.php',
-        'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
         'Psr\\SimpleCache\\CacheException' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheException.php',
@@ -3937,7 +3936,6 @@ class ComposerStaticInit160642073b267b76aa7f828e82139588
         'Symfony\\Component\\EventDispatcher\\Debug\\TraceableEventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/TraceableEventDispatcherInterface.php',
         'Symfony\\Component\\EventDispatcher\\Debug\\WrappedListener' => __DIR__ . '/..' . '/symfony/event-dispatcher/Debug/WrappedListener.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\AddEventAliasesPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/AddEventAliasesPass.php',
-        'Symfony\\Component\\EventDispatcher\\DependencyInjection\\ExtractingEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\DependencyInjection\\RegisterListenersPass' => __DIR__ . '/..' . '/symfony/event-dispatcher/DependencyInjection/RegisterListenersPass.php',
         'Symfony\\Component\\EventDispatcher\\Event' => __DIR__ . '/..' . '/symfony/event-dispatcher/Event.php',
         'Symfony\\Component\\EventDispatcher\\EventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/EventDispatcher.php',
@@ -4315,7 +4313,6 @@ class ComposerStaticInit160642073b267b76aa7f828e82139588
         'Symfony\\Component\\Routing\\Loader\\ObjectLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/ObjectLoader.php',
         'Symfony\\Component\\Routing\\Loader\\ObjectRouteLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/ObjectRouteLoader.php',
         'Symfony\\Component\\Routing\\Loader\\PhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
-        'Symfony\\Component\\Routing\\Loader\\ProtectedPhpFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/PhpFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\XmlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/XmlFileLoader.php',
         'Symfony\\Component\\Routing\\Loader\\YamlFileLoader' => __DIR__ . '/..' . '/symfony/routing/Loader/YamlFileLoader.php',
         'Symfony\\Component\\Routing\\Matcher\\CompiledUrlMatcher' => __DIR__ . '/..' . '/symfony/routing/Matcher/CompiledUrlMatcher.php',
